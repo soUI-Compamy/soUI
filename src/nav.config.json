@@ -1,0 +1,44 @@
+
+
+{
+    "开发指南": [
+      {
+        "name": "giud",
+        "path": "/giud",
+        "desc": "介绍"
+      },
+      {
+        "name": "index",
+        "path": "/",
+        "type": "index"
+      }
+    ],
+    "组件": [
+      {
+        "desc": "常用组件",
+        "path": "/component",
+        "items": [
+          {
+            "desc": "Button组件",
+            "name": "button",
+            "path": "/button"
+          },
+          {
+            "desc": "图标组件",
+            "name": "icon",
+            "path": "/icon"
+          },
+          {
+            "desc": "支付组件",
+            "name": "pay",
+            "path": "/pay"
+          },
+          {
+            "desc":"二维码组件",
+            "name":"qrcode",
+            "path":"/qrcode"
+          }
+        ]
+      }
+    ]
+  }
