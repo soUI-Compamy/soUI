@@ -83,6 +83,10 @@ export default {
   },
   methods: {
     modalClose() {
+      //关闭弹窗 修改bottom值
+      if(this.type==='modal4'){
+        this.modalDisplay=false
+      }
       this.$emit('modalClose');
     }
   },
@@ -104,9 +108,9 @@ export default {
         setTimeout(() => {
           this.modalClose();
         }, this.hideTime);
-      }else{
+      }else if(val && this.type === 'modal4'){
          setTimeout(() => {
-         this.modalDisplay =!this.modalDisplay
+         this.modalDisplay =true
         }, 300);
       }
     },
