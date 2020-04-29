@@ -37,6 +37,11 @@
             "desc":"二维码组件",
             "name":"qrcode",
             "path":"/qrcode"
+          },
+          {
+            "desc":"弹窗组件",
+            "name":"modal",
+            "path":"/modal"
           }
         ]
       }
