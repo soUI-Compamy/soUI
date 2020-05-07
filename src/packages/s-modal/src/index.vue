@@ -39,7 +39,7 @@ export default {
       default: 'modal1'
       /*
         {
-          'modal1': '完全自定义对话框',
+          'modal1': '自定义对话框',
           'modal2': '成功，失败，警告提示'
           'modal3': '右侧拉显示对话框'
           'modal4': '自定义tag提示'
