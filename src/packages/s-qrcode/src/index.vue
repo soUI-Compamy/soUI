@@ -1,5 +1,4 @@
-<!-- @Auther: xiaokaike -->
-<!-- https://github.com/xiaokaike/vue-qrcode -->
+
 <template>
     <div class="qrcode-container">
         <so-button class="changebtn" @click="changeColor">点击切换颜色</so-button>
