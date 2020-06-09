@@ -15,7 +15,7 @@
     ],
     "组件": [
       {
-        "desc": "常用组件",
+        "desc": "按钮图标组件",
         "path": "/component",
         "items": [
           {
@@ -27,21 +27,48 @@
             "desc": "图标组件",
             "name": "icon",
             "path": "/icon"
-          },
-          {
-            "desc": "支付组件",
-            "name": "pay",
-            "path": "/pay"
-          },
-          {
-            "desc":"二维码组件",
-            "name":"qrcode",
-            "path":"/qrcode"
-          },
+          }
+        ]
+      },{
+        "desc":"弹窗组件",
+        "path": "/component",
+        "items":[
           {
             "desc":"弹窗组件",
             "name":"modal",
             "path":"/modal"
+          }
+        ]
+      },
+      {
+        "desc":"支付组件",
+        "path": "/component",
+        "items":[
+          {
+            "desc": "支付组件",
+            "name": "pay",
+            "path": "/pay"
+          }
+        ]
+      },{
+        "desc":"二维码组件",
+        "path": "/component",
+        "items":[
+          {
+            "desc": "二维码组件",
+            "name": "qrcode",
+            "path": "/qrcode"
+          }
+        ]
+      },
+      {
+        "desc":"标签组件",
+        "path": "/component",
+        "items":[
+          {
+            "desc": "标签组件",
+            "name": "tag",
+            "path": "/tag"
           }
         ]
       }

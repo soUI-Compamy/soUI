@@ -7,11 +7,13 @@ import SoButton from './s-button/index.js'
 import SoPay from './s-pay/index.js'
 import SoQrcode from './s-qrcode/index.js'
 import SoModal from './s-modal/index.js'
+import SoTag from './s-tag/index.js'
 const components = [
     SoButton,
     SoPay,
     SoQrcode,
-    SoModal
+    SoModal,
+    SoTag
 ]
 const install = Vue=>{
     if(install.installed) return
@@ -26,5 +28,6 @@ if (typeof window !== 'undefined' && window.Vue) {
     SoButton,
     SoPay,
     SoQrcode,
-    SoModal
+    SoModal,
+    SoTag
   }
