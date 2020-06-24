@@ -1,17 +1,24 @@
 {
-  "name": "soui",
-  "version": "1.0.0",
+  "name": "ckg-ui",
+  "version": "1.6.0",
   "description": "ui组件库",
   "author": "lifenglei <1125911451@qq.com>",
-  "private": true,
+  "private": false,
+  "main":"dist/ckg-comps.min.js",
+  "keywords": [
+    "ckg",
+    "vue",
+    "components"
+  ],
   "scripts": {
-    "publish": "node build/publish.js",
-    "lib": "vue-cli-service build --target lib --name kui --dest lib packages/index.js",
+    "pod": "node build/publish.js",
     "dev": "webpack-dev-server --inline --open --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "tonpm": "npm run build  && npm publish"
+
   },
   "dependencies": {
     "fs": "^0.0.1-security",
@@ -26,6 +33,7 @@
     "qr.js": "0.0.0"
   },
   "devDependencies": {
+    "@vue/cli-service": "^3.5.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -74,7 +82,7 @@
     "sinon-chai": "^2.8.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
-    "vue-loader": "^13.3.0",
+    "vue-loader": "^11.1.4",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
@@ -82,6 +90,7 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^2.11.3",
     "webpack-merge": "^4.1.0"
+    
   },
   "engines": {
     "node": ">= 6.0.0",

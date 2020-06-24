@@ -7,7 +7,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import demoBlock from './components/demo-block.vue'
-import SoUI from '../src/packages/index'
+import SoUI from './packages'
 import './theme/index.less'
 Vue.component('demo-block', demoBlock)
 Vue.config.productionTip = false
