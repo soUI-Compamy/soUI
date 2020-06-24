@@ -7,7 +7,7 @@ let routes = []//定义路由
 Object.keys(navConfig).forEach((item)=>{
   routes = routes.concat(navConfig[item])
 })
-console.log(routes)
+//生成最终路由 根据type取映射相应的组件或者md
 let addRouter=router=>{
   router.forEach((route) => {
     if (route.items) {

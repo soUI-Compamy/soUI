@@ -5,6 +5,7 @@
   "author": "lifenglei <1125911451@qq.com>",
   "private": true,
   "scripts": {
+    "publish": "node build/publish.js",
     "lib": "vue-cli-service build --target lib --name kui --dest lib packages/index.js",
     "dev": "webpack-dev-server --inline --open --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -13,6 +14,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^4.0.0",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^4.0.0",
     "markdown-it-container": "^2.0.0",
