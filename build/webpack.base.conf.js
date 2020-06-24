@@ -7,9 +7,12 @@ const MarkdownItContainer = require('markdown-it-container')
 const striptags = require('./strip-tags')
 const md = require('markdown-it')//引入markdown-it
 const slugify = require('transliteration').slugify;
+
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+console.log(process.env.NODE_ENV)
 
 const vueMarkdown = {
   //定义处理规则
@@ -61,7 +64,9 @@ const vueMarkdown = {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app:process.env.NODE_ENV === 'production'
+    ? './src/packages/index.js'
+    : './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -87,7 +92,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        options:{
+          presets:["es2015"]
+        },
+        include:[resolve('src'), resolve('test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
