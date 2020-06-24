@@ -22,13 +22,19 @@ inquirer.prompt([{
   }]
 }, {
   name: 'message',
-  message: '版本发布说明',
+  message: '提交发布说明',
   type: 'input',
   default: ''
+},{
+    name:'branch',
+    message:'推送分支名称',
+    type:'input',
+
 }]).then(function (answers) {
+    console.log(answers)
   let build = answers.conform ? 'npm run build &&' : '';
   var cmd = `${build} 
-  git checkout -b soUI-pages && 
+  git checkout -b ${answers.branch} && 
   rm -rf index.html && 
   rm -rf static && 
   cd dist && 
