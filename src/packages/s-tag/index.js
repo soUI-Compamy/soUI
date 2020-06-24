@@ -1,5 +1,5 @@
 import Tag from './src/index.vue'
-// Button.install = function (Vue) {
-//   Vue.component(Button.name, Button)
-// }
+Tag.install = function (Vue) {
+  Vue.component(Tag.name, Button)
+}
 export default Tag

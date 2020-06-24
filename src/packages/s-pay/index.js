@@ -1,5 +1,5 @@
 import Pay from './src/index.vue'
-// Button.install = function (Vue) {
-//   Vue.component(Button.name, Button)
-// }
+Pay.install = function (Vue) {
+  Vue.component(Pay.name, Button)
+}
 export default Pay
