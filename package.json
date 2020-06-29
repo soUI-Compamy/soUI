@@ -1,10 +1,10 @@
 {
   "name": "ckg-ui",
-  "version": "1.6.0",
-  "description": "ui组件库",
+  "version": "1.1.0",
+  "description": "基于vue开发的业务组件 个人维护",
   "author": "lifenglei <1125911451@qq.com>",
   "private": false,
-  "main":"dist/ckg-comps.min.js",
+  "main": "dist/ckg-ui.min.js",
   "keywords": [
     "ckg",
     "vue",
@@ -18,7 +18,6 @@
     "test": "npm run unit",
     "build": "node build/build.js",
     "tonpm": "npm run build  && npm publish"
-
   },
   "dependencies": {
     "fs": "^0.0.1-security",
@@ -26,14 +25,16 @@
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^4.0.0",
     "markdown-it-container": "^2.0.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "qr.js": "0.0.0",
     "transliteration": "^2.1.7",
     "vue": "^2.5.2",
     "vue-markdown-loader": "^2.2.3",
-    "vue-router": "^3.0.1",
-    "qr.js": "0.0.0"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.5.0",
+    "eslint-friendly-formatter": "^3.0.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -43,6 +44,7 @@
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "babel-preset-env": "^1.3.2",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.22.0",
     "chai": "^4.1.2",
     "chalk": "^2.0.1",
@@ -90,7 +92,6 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^2.11.3",
     "webpack-merge": "^4.1.0"
-    
   },
   "engines": {
     "node": ">= 6.0.0",

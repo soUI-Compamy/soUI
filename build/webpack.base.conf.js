@@ -7,6 +7,7 @@ const MarkdownItContainer = require('markdown-it-container')
 const striptags = require('./strip-tags')
 const md = require('markdown-it')//引入markdown-it
 const slugify = require('transliteration').slugify;
+const ExtractTextPlugin = require("extract-text-webpack-plugin"); 
 
 
 function resolve (dir) {
@@ -64,9 +65,7 @@ const vueMarkdown = {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app:process.env.NODE_ENV === 'production'
-    ? './src/packages/index.js'
-    : './src/main.js'
+    app: './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -79,7 +78,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      '@': resolve('src')
     }
   },
   module: {
@@ -90,12 +89,21 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('examples'), resolve('test')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         options:{
           presets:["es2015"]
         },
-        include:[resolve('src'), resolve('test')]
+        include:[resolve('src'), resolve('test'),resolve('packages')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

@@ -1,2 +1,7 @@
 node_modules
-/dist
+packages
+src
+build
+config
+test
+static
