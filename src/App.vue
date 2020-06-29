@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-      <mainHeader></mainHeader>
+    <div class="background" :style="{'position':isIndex?'absolute':''}">
+      <img :src="imgSrc" width="100%" height="100%" alt="" v-if="isIndex" />
+      <mainHeader v-if="!isIndex"></mainHeader>
+    </div>
       <div class="container" v-if="!isIndex">
         <sideNav class="nav"></sideNav>
         <router-view class="view"></router-view>
@@ -20,7 +23,8 @@
     data () {
       return {
         init: true,
-        isIndex: true
+        isIndex: true,
+        imgSrc:'https://static.soyoung.com/sy-pre/user-register-backgroundimage-1593414600737.jpg'
       }
     },
     watch: {
@@ -41,6 +45,11 @@
 
 <style lang="less" type="text/less">
   @import "./assets/less/index";
+.background{
+    width:100%;  
+    height:100%;  /**宽高100%是为了图片铺满屏幕 */
+    z-index:-1;
+}
 
   .container {
     margin: 48px auto;

@@ -1,13 +1,12 @@
 <template>
   <div  class="pg-index">
     <div class="index-container">
-      <img src="../assets/img/logo.png">
       <p>一款轻量级、模块化的前端 UI 组件库</p>
     </div>
     <div class="separate-panel">
       <div class="about">
         <router-link :to="{name: 'giud'}">开始使用</router-link>
-        <a target="_blank" class="btn-github">GitHub</a>
+        <a target="_blank" href="https://github.com/soUI-Compamy/soUI" class="btn-github">GitHub</a>
       </div>
     </div>
   </div>
@@ -17,7 +16,7 @@
   export default{
     data () {
       return {
-        height: document.documentElement.clientHeight
+        
       }
     }
   }
@@ -31,7 +30,7 @@
       padding: 100px 0;
       p{
         margin-top: 56px;
-        color: #8994C6;
+        color: #fff;
         font-size: 32px;
       }
     }
@@ -41,9 +40,7 @@
         position: absolute;
         width: 100%;
         height: 200px;
-        top: 20px;
         z-index: 9;
-        background: #fff;
         text-align: center;
         a {
           color: #fff;
@@ -66,17 +63,6 @@
           box-shadow: none;
         }
       }
-    }
-    .separate-panel:after{
-      content: '';
-      display: block;
-      position: absolute;
-      top: -80px;
-      width: 100%;
-      height: 250px;
-      background: #fff;
-      box-shadow: 0 -4px 30px 0 #DFE1E6;
-      transform: skewY(-4deg);
     }
   }
 </style>
