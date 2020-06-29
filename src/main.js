@@ -11,7 +11,7 @@ import SoUI from '../packages/index.js'
 import '../packages/theme-default/index.less'
 Vue.component('demo-block', demoBlock)
 Vue.config.productionTip = false
-console.log('入口')
+console.log('%c ','background-image:url("https://static.soyoung.com/sy-pre/7942002eda6ddac2-1571297816113.gif");background-size:120% 120%;background-repeat:no-repeat;background-position:center center;line-height:100px;padding:30px 120px;');
 Vue.use(SoUI)
 /* eslint-disable no-new */
 new Vue({
